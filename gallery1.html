@@ -20,6 +20,54 @@
         <!-- Skin Color -->
         <link rel="stylesheet" href="css/colors/red.css" id="color-skins"/>
 
+
+        <style>
+             
+            
+          
+            .row {
+              display: -ms-flexbox; /* IE10 */
+              display: flex;
+              -ms-flex-wrap: wrap; /* IE10 */
+              flex-wrap: wrap;
+              padding: 0 4px;
+            }
+            
+            /* Create four equal columns that sits next to each other */
+            .column {
+              -ms-flex: 25%; /* IE10 */
+              flex: 25%;
+              max-width: 33%;
+              padding: 0 4px;
+            }
+            
+            .column img {
+              margin-top: 8px;
+              vertical-align: middle;
+              width: 100%;
+            }
+            
+            /* Responsive layout - makes a two column-layout instead of four columns */
+            @media screen and (max-width: 800px) {
+              .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+              }
+            }
+            
+            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+              .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+              }
+            }
+            </style>
+
+
+
 	</head>
 	<body>
 
@@ -27,7 +75,7 @@
              <!-- Start Preloader -->
              <div id="preloader">
                 <div class="loader">
-                    <img src="img/assets/preloader-logo.png" alt="Vossen">
+                    <img src="img/assets/preloader-logo.png" alt="Vossen" style="z-index: -1;">
                 </div>
             </div>
             <!-- End Preloader -->
@@ -93,181 +141,87 @@
                     </nav>
 		</header>
         <!--End Header-->
+   
+ 
 
-        <!-- Start Page Top -->
-        <section id="page-top" style="height:400px">
-        <div class="hero">
 
-            <img src="img/backgrounds/bg-shortcodes.jpg" alt="hero">
 
-            <div class="page-top-title text-center">
-                <h2 class="white op-1">A Garden Of Glimpses</h2>
-                <p class="home-subheading op-1">Down the memory lane</p>
+
+
+        <section id="blog" style="position: relative;padding-top: 15vh;" >
+
+           <div class="col-md-12 uppercase wow fadeIn animated" style="visibility: visible;">
+            <center><h1>Gallery of glimpses</h1>
+
+                </center>
+            </div>
+                
+            <div class="container"  >
+            
+           <div class="row" id="masonry"   > 
+            <div class="column">
+              <img src="./img/blog/masonry/blog-1.jpg" style="width:100%">
+              <img src="./img/blog/masonry/blog-2.jpg" style="width:100%">
+              <img src="./img/blog/masonry/blog-3.jpg" style="width:100%">
+              <img src="./img/blog/masonry/blog-4.jpg" style="width:100%">
+              <img src="./img/blog/masonry/blog-5.jpg" style="width:100%">
+              <img src="./img/blog/masonry/blog-6.jpg" style="width:100%">
+              <img src="./img/blog/masonry/blog-7.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./img/blog/masonry/blog-8.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-9.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-10.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-11.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-12.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-13.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-14.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-22.jpg" style="width:100%">
+ 
+
+              </div>
+              <div class="column">
+                <img src="./img/blog/masonry/blog-15.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-16.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-17.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-18.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-19.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-20.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-21.jpg" style="width:100%">
+                <img src="./img/blog/masonry/blog-25.jpg" style="width:100%">
+
+              </div>
+        </div>
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="./gallery1.html"><i class="ion-android-arrow-back"></i></a>
+                    </li>
+                    <li class="next">
+                        <a href="./gallery2.html"><i class="ion-android-arrow-forward"></i></a>
+                    </li>
+                </ul>
+
             </div>
 
-        </div>
         </section>
-        <!-- End Page Top -->
+ 
+
+
 
         <div class="site-wrapper content bg-grey">
 
-
-            <!-- Start Blog Classic -->
-            <section id="blog">
-                <div class="container">
-
-                    <div id="masonry">
-
-                        <div class="column">
-                            <div class="blog-column">
-                               <img class="img-responsive blog-img" src="img/blog/masonry/blog-1.jpg" alt="">
-                              
-                            </div>
-                        </div>
-
-                        <div class="column">
-                            <div class="blog-column">
-                                <img class="img-responsive blog-img" src="img/blog/masonry/blog-2.jpg" alt="">
-                           
-                            </div>
-                        </div>
-
-                        <div class="column">
-                            <div class="blog-column">
-                                <img class="img-responsive blog-img" src="img/blog/masonry/blog-3.jpg" alt="">
-                              
-                            </div>
-                        </div>
-
-                        <div class="column">
-                            <div class="blog-column">
-                                <img class="img-responsive blog-img" src="img/blog/masonry/blog-4.jpg" alt="">
-                           
-                            </div>
-                        </div>
-
-                        <div class="column">
-                            <div class="blog-column">
-                               <img class="img-responsive blog-img" src="img/blog/masonry/blog-5.jpg" alt="">
-                                
-                                
-                            </div>
-                        </div>
-
-                        <div class="column">
-                            <div class="blog-column">
-                               <img class="img-responsive blog-img" src="img/blog/masonry/blog-6.jpg" alt="">
-                                
-                            </div>
-                        </div>
-
-                        <div class="column">
-                            <div class="blog-column">
-                               <img class="img-responsive blog-img" src="img/blog/masonry/blog-7.jpg" alt="">
-                                 
-                            </div>
-                        </div>
-
-                        <div class="column">
-                                <div class="blog-column">
-                              <img class="img-responsive blog-img" src="img/blog/masonry/blog-8.jpg" alt="">
-                                  
-                                </div>
-                            </div>
-    
-                            <div class="column">
-                                <div class="blog-column">
-                               <img class="img-responsive blog-img" src="img/blog/masonry/blog-9.jpg" alt="">
-                               
-                                </div>
-                            </div>
-    
-                            <div class="column">
-                                <div class="blog-column">
-                               <img class="img-responsive blog-img" src="img/blog/masonry/blog-10.jpg" alt="">
-                                  
-                                </div>
-                            </div>
-    
-                            <div class="column">
-                                <div class="blog-column">
-                                <img class="img-responsive blog-img" src="img/blog/masonry/blog-11.jpg" alt="">
-                               
-                                </div>
-                            </div>
-    
-                            <div class="column">
-                                <div class="blog-column">
-                                  <img class="img-responsive blog-img" src="img/blog/masonry/blog-12.jpg" alt="">
-                                    
-                                    
-                                </div>
-                            </div>
-    
-                            <div class="column">
-                                <div class="blog-column">
-                                <img class="img-responsive blog-img" src="img/blog/masonry/blog-13.jpg" alt="">
-                                    
-                                </div>
-                            </div>
-    
-                            <div class="column">
-                                <div class="blog-column">
-                               <img class="img-responsive blog-img" src="img/blog/masonry/blog-14.jpg" alt="">
-                                     
-                                </div>
-                            </div>
-
-                            
-
-                            <div class="column">
-                                    <div class="blog-column">
-                                       <img class="img-responsive blog-img" src="img/blog/masonry/blog-15.jpg" alt="">
-                                      
-                                    </div>
-                                </div>
-        
-                                <div class="column">
-                                    <div class="blog-column">
-                                     <img class="img-responsive blog-img" src="img/blog/masonry/blog-16.jpg" alt="">
-                                   
-                                    </div>
-                                </div>
-        
-                                <div class="column">
-                                    <div class="blog-column">
-                                       <img class="img-responsive blog-img" src="img/blog/masonry/blog-17.jpg" alt="">
-                                      
-                                    </div>
-                                </div>
-        
-                                                           
-
-                    </div>
-
-                    
-
-                    <hr>
-                    <!-- Pager -->
-                    <ul class="pager">
-                        <li class="previous">
-                            <a href="#"><i class="ion-android-arrow-back"></i></a>
-                        </li>
-                        <li class="next">
-                            <a href="./gallery2.html"><i class="ion-android-arrow-forward"></i></a>
-                        </li>
-                    </ul>
-
-                </div>
-
-            </section>
-
+   
             <!-- Start Footer 1 -->
             <footer id="footer">
               
 				<div class="footer-copyright">
 					<div class="container">
 						<div class="row">
+
 
 							<div class="col-md-6 col-sm-12">
 								<p>© 2019 <a href="index-2.html" class="logo">Dhwani</a> All Rights Reserved. </p>
@@ -300,26 +254,25 @@
         </div><!-- End Site Wrapper -->
 
         <!-- jQuery -->
-        <script src="js/plugins/jquery.min.js" defer></script>
-        <script src="js/plugins/revslider.min.js" defer></script>
-        <script src="js/plugins/bootstrap.min.js" defer></script>
-        <script src="js/plugins/waypoints.min.js" defer ></script>
-        <script src="js/plugins/waypoints.min.js" defer ></script>
-        <script src="js/plugins/parallax.min.js" defer></script>
-        <script src="js/plugins/easign1.3.min.js" defer></script>
-        <script src="js/plugins/moderniz.min.js" defer></script>
-        <script src="js/plugins/cubeportfolio.min.js" defer></script>
-        <script src="js/plugins/owlcarousel.min.js" defer></script>
-         <script src="js/plugins/gmap3.min.js" defer></script>
-        <script src="js/plugins/wow.min.js" defer></script>
-        <script src="js/plugins/counterup.min.js" defer></script>
-		<script src="js/plugins/masonry.js" defer></script>
-        <script src="js/scripts.js" defer></script>
-
+        <script src="js/plugins/jquery.min.js"></script>
+        <script src="js/plugins/revslider.min.js"></script>
+        <script src="js/plugins/bootstrap.min.js"></script>
+        <script src="js/plugins/waypoints.min.js"></script>
+        <script src="js/plugins/parallax.min.js"></script>
+        <script src="js/plugins/easign1.3.min.js"></script>
+        <script src="js/plugins/moderniz.min.js"></script>
+        <script src="js/plugins/cubeportfolio.min.js"></script>
+        <script src="js/plugins/owlcarousel.min.js"></script>
+         <!-- <script src="js/plugins/gmap3.min.js"></script> -->
+        <script src="js/plugins/wow.min.js"></script>
+        <script src="js/plugins/counterup.min.js"></script>
+		<!-- <script src="js/plugins/masonry.js"></script> -->
+        <script src="js/scripts.js"></script>
+<!-- 
         <script>
         var msnry = new Masonry( '#masonry', {
          });
-        </script>
+        </script> -->
 
 	</body>
 

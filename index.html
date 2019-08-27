@@ -74,8 +74,8 @@
                                 <li class="dropdown">
                                 <span class="dropdown-toggle" data-toggle="dropdown">Gallery<b class="caret"></b></span>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li class="active"><a href="./gallery1.html" style="color: white;">Images</a></li>
-                                    <li class="active"><a href="./videos.html" style="color: white;">Videos</a></li>
+                                    <li class="active"><a href="./gallery1.html" style="color: white;background-color: #1c1c1c;">Images</a></li>
+                                    <li class="active"><a href="./videos.html" style="color: white;background-color: #1c1c1c;">Videos</a></li>
                       
                                  </ul>
                             </li>
@@ -842,7 +842,7 @@
                     <div class="row">
 
                         <div class="col-md-12" id="team">
-                            <h2 class="section-title wow fadeInUp">Join us</h2>
+                            <h2 class="section-title wow fadeInUp">Contact us</h2>
                         </div>
 
                         <div class="col-md-6 col-md-offset-3 text-center wow fadeInUp"  >
@@ -852,16 +852,16 @@
                                 <fieldset >
                                         <input name="Name" type="text" id="name" placeholder="Name"  required />
                                         <!-- <input name="email" type="text" id="email" placeholder="Email"/> -->
-                                        <input name="Batch" type="text" id="name"  placeholder="Batch"  required />
-                                        <input name="Branch" type="text" id="name"  placeholder="Branch" required  />
-                                        <input name="Roll no" type="text" id="name"  placeholder="Roll No" required  />
-                                        <input name="Role" type="text" id="name"  placeholder="Interested In"  required />
+                                        <!-- <input name="Batch" type="text" id="name"  placeholder="Batch"  required /> -->
+                                        <!-- <input name="Branch" type="text" id="name"  placeholder="Branch" required  /> -->
+                                        <!-- <input name="Roll no" type="text" id="name"  placeholder="Roll No" required  /> -->
+                                        <input name="Contact" type="text" id="name"  placeholder="Contact No."  required />
 
 
 
                                  </fieldset>
                                 <fieldset>
-                                        <textarea name="Why dhwani?" cols="40" rows="3" id="comments" placeholder="Why Dhwani?"  ></textarea>
+                                        <textarea name="Query" cols="40" rows="3" id="comments" placeholder="Query"  ></textarea>
                                 </fieldset>
                                 <input type="submit" class="submit" id="submit" value="Send Message" required />
                             </form>
@@ -992,7 +992,7 @@
               method: "GET",
               dataType: "json",
               data: $form.serializeObject()
-            }).then(function (response){alert("See you at the auditions. Stay Musical!.") },function (error){});
+            }).then(function (response){alert("Thanks for your feedback!.") },function (error){});
           })</script>
 
         <!-- jQuery -->
