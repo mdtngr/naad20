@@ -783,6 +783,9 @@ nav {
 	.navbar-default .navbar-collapse {
 		background-color: #1c1c1c;
 	}
+
+ 
+
 	.container>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse {
 		margin-right: 0;
 		margin-left: 0;
