@@ -662,7 +662,7 @@ nav {
 }
 .navbar-alt .navbar-nav > li > a,
 .navbar-alt .navbar-nav > li > span {
-	color: #fff;
+	color: rgb(255, 255, 255);
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -671,7 +671,7 @@ nav {
 }
 .navbar-small .navbar-nav > li > a,
 .navbar-small .navbar-nav > li > span {
-	color: #1C1C1C;
+	color: rgb(255, 255, 255);
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
