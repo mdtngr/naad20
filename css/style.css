@@ -3582,68 +3582,7 @@ pre {
 .slider-fullwidth .owl-next {
 	margin-top: 22px;
 }
-/* Hero Video */
-#vossen-youtube {
-	position: absolute;
-	overflow: hidden;
-	background-color: #0f1112;
-	top: 50%;
-	left: 50% !important;
-	z-index: 0;
-	-webkit-transform: translate3d( -50%, -50%, 0 );
-	-ms-transform: translate3d( -50%, -50%, 0 );
-	-moz-transform: translate3d( -50%, -50%, 0 );
-	-o-transform: translate3d( -50%, -50%, 0 );
-	transform: translate3d( -50%, -50%, 0 );
-}
-#play-toggle,
-#mute-toggle {
-	font-size: 23px;
-	position: absolute;
-	z-index: 1;
-	bottom: 20px;
-	padding: 1px;
-	line-height: 10px;
-	opacity: .3;
-}
-#mute-toggle {
-	left: 66px;
-	bottom: 19px;
-}
-#play-toggle {
-	left: 36px;
-	font-size: 20px;
-}
-[data-overlay-dark] #mute-toggle,
-[data-overlay-dark] #play-toggle,
-[data-overlay-color] #mute-toggle,
-[data-overlay-color] #play-toggle {
-	color: #fff;
-}
-[data-overlay-light] #mute-toggle,
-[data-overlay-light] #play-toggle {
-	color: #111;
-}
-.vossen-video {
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	position: absolute;
-	overflow: hidden;
-	background-color: #0f1112;
-	top: 50%;
-	left: 50% !important;
-	z-index: 0;
-	-webkit-transform: translate3d( -50%, -50%, 0);
-	-moz-transform: translate3d( -50%, -50%, 0);
-	transform: translate3d( -50%, -50%, 0);
-}
-@media (max-width:992px) {
-	.vossen-video {
-		display: none;
-	}
-}
+
 /*Owl Controls*/
 .owl-controls {
 	margin-top: 0;
