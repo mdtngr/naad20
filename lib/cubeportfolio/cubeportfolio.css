@@ -95,10 +95,11 @@
 
 .cbp-ready .cbp-wrapper {
     visibility: visible;
+    /* z-index: 3; */
 }
 
 .cbp-wrapper-front {
-    z-index: 3;
+    z-index: 0; 
 }
 
 .cbp-wrapper-back {
