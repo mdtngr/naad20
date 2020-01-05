@@ -38,10 +38,8 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-
-
 	</head>
-	<body>
+	<body id="pageContent">
 
         <!-- Start Preloader -->
         <div id="preloader">
@@ -80,7 +78,8 @@
                             <li class="to-section menu"><a href="./videos.html">Performances</a></li>
                             <li class="to-section menu"><a href="./win.html">Achievements</a></li>
                             <li class="to-section menu"><a href="./gallery1.html">Gallery</a></li>
- 
+                            <li class="to-section menu" id="schedule"><a href="#">Workshops Schedule</a></li>
+                          
                             
                             <li class="to-section"><a href="#team">Contact Us</a></li>
 
@@ -91,7 +90,42 @@
 		</header>
         <!-- End Header -->
 
+     
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" style="height: 100vh;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="height: 92vh;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Schedule</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body" style="text-align: center;">
+       
+          <ul class="list-group">
+           <li class="list-group-item" style="padding: 29px 10px;">Monday - Keyboard</li>
+           <li class="list-group-item" style="padding: 29px 10px;">Tuesday - Tabla</li>
+           <li class="list-group-item" style="padding: 29px 10px;">Wednesday - Vocals and mixing</li>
+           <li class="list-group-item" style="padding: 29px 10px;">Thursday - Drums and Sitar</li>
+           <li class="list-group-item" style="padding: 29px 10px;">Friday - Guitar</li>
+         </ul>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<script>
+$('#schedule').click(function() {
+   $('#exampleModalLong').modal('show');
+});
+$("#exampleModalLong").on("shown.bs.modal", function(){
+      $('.modal-backdrop.in').css('opacity', '0.9');
+});
+
+</script>
 
         <!-- Start Home Revolution Slider Parallax Section -->
         <section id="home-revolution-slider">
@@ -615,7 +649,7 @@
                                 <fieldset >
                                         <input name="Name" type="text" id="name" placeholder="Name"  required />
                                         <!-- <input name="email" type="text" id="email" placeholder="Email"/> -->
-                                        <input name="Contact" type="text" id="name"  placeholder="Contact"  required />
+                                        <input name="Contact" type="text" id="contact"  placeholder="Contact"  required />
                                      
 
                                  </fieldset>
