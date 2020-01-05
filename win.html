@@ -26,6 +26,9 @@
                               }
           }
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 	</head>
 	<body>
 
@@ -69,10 +72,8 @@
                         <!-- <li class="to-section"><a href="#portfolio">Portfolio</a></li>  -->
                         
                         <li class="to-section navdrop"><a href="./gallery1.html" >Gallery</a></li>
-
-                    
-
-                     <li class="to-section"><a href="./index.html#team"  >Contact Us</a></li>
+                        <li class="to-section menu" id="schedule"><a href="#">Workshop</a></li>
+                        <li class="to-section"><a href="./index.html#team"  >Contact Us</a></li>
 
 
 
@@ -89,6 +90,50 @@
 
   </header>
         <!-- End Header -->
+
+
+        <!-- Modal -->
+<div class="modal fade" id="exampleModalLong" style="height: 100vh;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Workshop Schedule</h3>
+        <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">6/01/20 - 10/01/20</h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body" style="text-align: center;">
+       
+          <ul class="list-group">
+           <li class="list-group-item" style="font-size: large;"><strong>Monday - Keyboard</strong><br>5:15 PM - 6:30 PM</li>
+           <li class="list-group-item" style="font-size: large;"><strong>Tuesday - Mixing</strong><br>5:15 PM - 6:30 PM</li>
+           <li class="list-group-item" style="font-size: large;"><strong>Wednesday - Vocals</strong><br>5:15 PM - 6:30 PM</li>
+           <li class="list-group-item" style="font-size: large;"><strong>Thursday - Drums</strong><br>5:15 PM - 6:30 PM</li>
+           <li class="list-group-item" style="font-size: large;"><strong>Friday - Tabla</strong><br>5:15 PM - 6:30 PM</li>
+           <li class="list-group-item" style="font-size: large;"><strong>Saturday - Guitar</strong><br>5:15 PM - 6:30 PM</li>
+           <li class="list-group-item" style="font-size: large;"><strong>Sunday - Sitar</strong><br>5:15 PM - 6:30 PM</li>
+           
+         </ul>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$('#schedule').click(function() {
+   $('#exampleModalLong').modal('show');
+});
+$("#exampleModalLong").on("shown.bs.modal", function(){
+      $('.modal-backdrop.in').css('opacity', '0.9');
+});
+
+</script>
+
+
 
         <!-- Start Page Top -->
 
