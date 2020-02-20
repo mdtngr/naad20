@@ -1071,7 +1071,7 @@
       return o;
     };
 
-    var url = 'https://script.google.com/macros/s/AKfycbz0Ak2ITC9B63El0fZfZGlCH8efIQb5pvu1hfBJrCAUXmxcKGcT/exec'
+    var url_reg = 'https://script.google.com/macros/s/AKfycbz0Ak2ITC9B63El0fZfZGlCH8efIQb5pvu1hfBJrCAUXmxcKGcT/exec'
 
 
     $('#submit_reg').click(function (e) {
@@ -1081,7 +1081,7 @@
 
       e.preventDefault();
       $.ajax({
-        url: url,
+        url: url_reg,
         method: "GET",
         dataType: "json",
         data: $('form#contactform').serializeObject()
@@ -1100,7 +1100,7 @@
   <!-- MAYHEM REGISTRATION -->
   <script>
 
-    var url = 'https://script.google.com/macros/s/AKfycbyEN-AsdZSUQK8G8Xv9qatDUGXHmK6spnrUAuUE/exec'
+    var url_mayhem = 'https://script.google.com/macros/s/AKfycbyEN-AsdZSUQK8G8Xv9qatDUGXHmK6spnrUAuUE/exec'
   
 
     $('#submit_mayhem').click(function (e) {
@@ -1110,7 +1110,7 @@
 
       e.preventDefault();
       var jqxhr = $.ajax({
-        url: url,
+        url: url_mayhem,
         method: "GET",
         dataType: "json",
         data: $('form#mayhem_form').serializeObject()
@@ -1125,7 +1125,7 @@
 <!-- RAGESHREE REGISTRATION -->
 <script>
 
-  var url = 'https://script.google.com/macros/s/AKfycbzjyN-JE0ktzhKKypgMAc1cRT3Fz8svoF7g9g_vmp2Tncf4_xev/exec'
+  var url_rageshree = 'https://script.google.com/macros/s/AKfycbzjyN-JE0ktzhKKypgMAc1cRT3Fz8svoF7g9g_vmp2Tncf4_xev/exec'
 
 
   $('#submit_rageshree').click(function (e) {
@@ -1135,7 +1135,7 @@
 
     e.preventDefault();
     var jqxhr = $.ajax({
-      url: url,
+      url: urlrageshree_,
       method: "GET",
       dataType: "json",
       data: $('form#rageshree_form').serializeObject()
@@ -1151,7 +1151,7 @@
 <!-- DHUN REGISTRATION -->
 <script>
 
-  var url = 'https://script.google.com/macros/s/AKfycbxVcSIs35C7eivgZas4wnWGamSkoIzYTIxG8N5DblxU_YvqJtBo/exec'
+  var url_dhun = 'https://script.google.com/macros/s/AKfycbxVcSIs35C7eivgZas4wnWGamSkoIzYTIxG8N5DblxU_YvqJtBo/exec'
 
 
   $('#submit_dhun').click(function (e) {
@@ -1161,7 +1161,7 @@
 
     e.preventDefault();
     var jqxhr = $.ajax({
-      url: url,
+      url: url_dhun,
       method: "GET",
       dataType: "json",
       data: $('form#dhun_form').serializeObject()
@@ -1177,7 +1177,7 @@
  
 <script>
 
-  var url = 'https://script.google.com/macros/s/AKfycbyYhNNaETVcTCXsij7tAYrs8p2cq18yU-alnGKMaKX2ml44SLU/exec'
+  var url_alankaar = 'https://script.google.com/macros/s/AKfycbyYhNNaETVcTCXsij7tAYrs8p2cq18yU-alnGKMaKX2ml44SLU/exec'
 
 
   $('#submit_alankaar').click(function (e) {
@@ -1187,7 +1187,7 @@
 
     e.preventDefault();
     var jqxhr = $.ajax({
-      url: url,
+      url: url_alankaar,
       method: "GET",
       dataType: "json",
       data: $('form#alankaar_form').serializeObject()
@@ -1203,7 +1203,7 @@
  
 <script>
 
-  var url = 'https://script.google.com/macros/s/AKfycbyeU9IKFkXGX8N8clVTtqMQgdu5gAF06JxbaPVZ39c9kJXHFVY/exec'
+  var url_euphony = 'https://script.google.com/macros/s/AKfycbyeU9IKFkXGX8N8clVTtqMQgdu5gAF06JxbaPVZ39c9kJXHFVY/exec'
 
 
   $('#submit_euphony').click(function (e) {
@@ -1213,12 +1213,12 @@
 
     e.preventDefault();
     var jqxhr = $.ajax({
-      url: url,
+      url: url_euphony,
       method: "GET",
       dataType: "json",
       data: $('form#euphony_form').serializeObject()
     }).then(function (response) { 
-      document.getElementById("euphony_status").innerHTML='<input type=submit class="submit" id="submit_reg" value="Registration Successful!" required />';
+      document.getElementById("euphony_status").innerHTML='<input type=submit class="submit" style="background-color: #0062cc;" id="submit_reg" value="Registration Successful!" required />';
 
     }, function (error) { });
   });
@@ -1226,9 +1226,8 @@
 </script>
 
 <!-- REGISTER FOR MAATI -->
-<script>
-
-  var url = 'https://script.google.com/macros/s/AKfycbx9OUWQinbaeP3XvVHfoluj228SavlP8OydQuQ9-repSZ4lqsM/exec'
+ <script>
+  var url_maati = 'https://script.google.com/macros/s/AKfycbx9OUWQinbaeP3XvVHfoluj228SavlP8OydQuQ9-repSZ4lqsM/exec'
 
 
   $('#submit_maati').click(function (e) {
@@ -1238,12 +1237,12 @@
 
     e.preventDefault();
     var jqxhr = $.ajax({
-      url: url,
+      url: url_maati,
       method: "GET",
       dataType: "json",
       data: $('form#maati_form').serializeObject()
     }).then(function (response) { 
-      document.getElementById("maati_status").innerHTML='<input type=submit class="submit" id="submit_reg" value="Registration Successful!" required />';
+      document.getElementById("maati_status").innerHTML='<input type=submit class="submit" id="submit_reg" style="background-color: blue;" value="Registration Successful!" required />';
 
     }, function (error) { });
   });
