@@ -57,16 +57,16 @@
           <li><a href="#about">About NAAD</a></li>
           <li><a href="#services">Register yourself</a></li>
           <li><a href="#portfolio">Image Gallery</a></li>
-          <li><a href="#team">Event Registration</a></li>
+          <li><a href="#mandramayhem">Event Registration</a></li>
           <li class="menu-has-children"><a href="">Event Details</a>
             <ul>
-              <li><a href="#Swaranjali">Mandra-Mayhem</a></li>
-              <li><a href="#Tarang">Rageshree</a></li>
-              <li><a href="#Jhankaar">Dhun</a></li>
-              <li><a href="#Alankaar">Alankaar</a></li>
-              <li><a href="#Euphony">Euphony</a></li>
+              <li><a href="#mandramayhem">Mandra-Mayhem</a></li>
+              <li><a href="#rageshree">Rageshree</a></li>
+              <li><a href="#dhun">Dhun</a></li>
+              <li><a href="#alankaar">Alankaar</a></li>
+              <li><a href="#euphony">Euphony</a></li>
 
-              <li><a href="#Maati">Maati</a></li>
+              <li><a href="#maati">Maati</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li>
@@ -528,7 +528,7 @@
     <!--==========================
       About Us Section
     ============================-->
-    <section id="mandra-mayhem">
+    <section id="mandramayhem">
       <div class="container">
 
         <header class="section-header">
@@ -1218,7 +1218,7 @@
           if (res.status === "error") {
             window.alert(res.message);
           }
-          document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registration Succesful" required />' ;
+          else document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registration Succesful" required />' ;
           console.log(res);
         },
         error: function (err) {
