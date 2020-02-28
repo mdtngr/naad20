@@ -52,8 +52,8 @@ router.post('/eventReg', async (req, res) => {
                 }
             });
             res.json({
-                status:"success",
-                message:"Stored Succesfully"
+                status: "success",
+                message: "Stored Succesfully"
             });
 
 
@@ -114,7 +114,7 @@ router.post('/registration', async (req, res) => {
 
 
 
-    
+
 });
 
 
