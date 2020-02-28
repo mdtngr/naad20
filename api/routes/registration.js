@@ -42,21 +42,25 @@ router.post('/eventReg', async (req, res) => {
             await Event.create(data, (err, data) => {
                 if (err) {
                     console.log(err);
+                    return res.json({
+                        status: "error",
+                        message: "The NAAD ID doesn't exist."
+                    });
                 }
                 else {
                     console.log(data);
-                    res.json({
-                        status:"success",
-                        message:"Stored Succesfully"
-                    });
                 }
             });
-
+            res.json({
+                status:"success",
+                message:"Stored Succesfully"
+            });
 
 
 
         };
     });
+
 
 
 });
