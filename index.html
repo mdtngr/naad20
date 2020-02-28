@@ -1206,7 +1206,7 @@
       }
       console.log(data);
 
-      document.getElementById("mayhem_status").innerHTML = '<input type=submit class="submit" id="submit_reg" value="Please Wait Registering..." required />';
+      document.getElementById(e.target.id.substring(7)+"_status").innerHTML = '<input type=submit class="submit" id="submit_reg" value="Please Wait Registering..." required />';
       //console.log($('form#mandramayhem_form').serializeObject());
       var jqxhr = $.ajax({
         url: req_url + '/eventReg',

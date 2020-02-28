@@ -44,7 +44,7 @@ router.post('/eventReg', async (req, res) => {
                     console.log(err);
                 }
                 else {
-                    console.log(data);
+                    console.log("Hello Hello: "+data);
                     res.sendStatus(200);
                 }
             });
