@@ -732,7 +732,7 @@
             </fieldset>
           </form>
           <div id="dhun_status">
-            <input event="Dhun" type="submit" class="submit_event" id="submit_dhun" value="Register for Dhun"
+            <input  type="submit" class="submit_event" id="submit_dhun" value="Register for Dhun"
               required />
           </div>
 
@@ -1054,7 +1054,7 @@
 
   <!-- PERSONAL REGISTRATION -->
   <script>
-    var req_url = "http://naad.dhwanibitmesra.live/api"
+    var req_url = "http://localhost:5000/api"
 
     $.fn.serializeObject = function () {
       var o = {};
@@ -1206,8 +1206,8 @@
       }
       console.log(data);
 
-      document.getElementById("mayhem_status").innerHTML = '<input type=submit class="submit" id="submit_reg" value="Please Wait Registering..." required />';
-      //console.log($('form#mandramayhem_form').serializeObject());
+      document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registering..." required />' ;
+
       var jqxhr = $.ajax({
         url: req_url + '/eventReg',
         method: "POST",
@@ -1218,7 +1218,7 @@
           if (res.status === "error") {
             window.alert(res.message);
           }
-          else document.getElementById(e.target.id.substring(7) + "_status").innerHTML = '<input type=submit class="submit" id="submit_reg" value="Registration Successful!" required />';
+          else document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registration Succesful" required />' ;
           console.log(res);
         },
         error: function (err) {

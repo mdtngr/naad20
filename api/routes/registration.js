@@ -45,7 +45,10 @@ router.post('/eventReg', async (req, res) => {
                 }
                 else {
                     console.log(data);
-                    res.sendStatus(200);
+                    res.json({
+                        status:"success",
+                        message:"Stored Succesfully"
+                    });
                 }
             });
 
