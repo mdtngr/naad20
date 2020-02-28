@@ -1054,7 +1054,7 @@
 
   <!-- PERSONAL REGISTRATION -->
   <script>
-    var req_url = "http://localhost:5000/api"
+    var req_url = "http://naad.dhwanibitmesra.live/api"
 
     $.fn.serializeObject = function () {
       var o = {};
@@ -1206,13 +1206,8 @@
       }
       console.log(data);
 
-<<<<<<< HEAD
       document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registering..." required />' ;
 
-=======
-      document.getElementById(e.target.id.substring(7)+"_status").innerHTML = '<input type=submit class="submit" id="submit_reg" value="Please Wait Registering..." required />';
-      //console.log($('form#mandramayhem_form').serializeObject());
->>>>>>> ddf7a9d7a0d844b07be9bac8b73542bcdf0d3d6e
       var jqxhr = $.ajax({
         url: req_url + '/eventReg',
         method: "POST",
@@ -1223,7 +1218,7 @@
           if (res.status === "error") {
             window.alert(res.message);
           }
-          else document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registration Succesful" required />' ;
+          document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registration Succesful" required />' ;
           console.log(res);
         },
         error: function (err) {
