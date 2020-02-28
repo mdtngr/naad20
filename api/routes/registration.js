@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 const Registration = require('./../models/registration');
 
+router.get('/',(req,res) =>{res.json({message:"Hello YG"});});
 
 router.post('/registration',async (req,res)=>{
 
     var last  =0;
-
+	console.log("Registration collection connecting...");
     await Registration.find({},(err,data)=>{
         if(err){
             console.log(err);

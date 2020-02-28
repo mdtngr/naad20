@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(flash());
 app.use(cors());
 
-app.use(registrationRoutes);
+app.use('/api',registrationRoutes);
 
 
 const PORT = process.env.PORT;

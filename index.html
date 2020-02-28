@@ -1081,7 +1081,7 @@
       document.getElementById("naad_id").innerHTML='<input type=submit class="submit" id="submit_reg" value="Please Wait Registering..." required />';
       console.log($('form#contactform').serializeObject());
       $.ajax({
-        url: 'http://localhost:5000/registration',
+        url: 'http://naad.dhwanibitmesra.live/api/registration',
         type: "POST",
         data: $('form#contactform').serializeObject(),
         success: function(res){
