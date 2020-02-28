@@ -1,0 +1,50 @@
+<%- include ./../partials/header.ejs %>
+
+<div class="container">
+    <form method="POST" action="http://localhost:5000/api/admin/findEvent">
+        <h2>
+            <p><ins>Event Details</ins></p>
+        </h2>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label>Event Name</label>
+                <select name="event" class="form-control">
+                    <option selected="selected" value="">--Select--</option>
+                    <option value="Mandra Mayhem">Mandra Mayhem</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Name</label>
+                <input name="name" type="text" class="form-control" placeholder="Last name">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>NaadID</label>
+                <input name="id" type="text" class="form-control" placeholder="(Enter the last digits after NAAD00___)">
+            </div>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-warning">Submit</button>
+    </form>
+    <h1>Participant Details</h1>
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td>ID</td>
+            <td>Event</td>
+
+
+        </tr>
+        <% for(var x in participants) { %>
+        <tr>
+            <td> <%= participants[x].name %> </td>
+            <td> NAADID00<%= participants[x].id %> </td>
+            <td> <%= participants[x].event %> </td>
+        </tr>
+        <% } %>
+    </table>
+</div>
+</body>
+
+</html>

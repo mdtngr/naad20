@@ -233,7 +233,7 @@
 
               <div class="form-group">
                 <label>Contact</label>
-                <input type="number" name="contact" class="form-control" id="contactno" placeholder="Enter Contact"
+                <input type="text" name="contact" class="form-control" id="contactno" placeholder="Enter Contact"
                   required />
               </div>
 
@@ -251,7 +251,11 @@
 
               <div class="form-group">
                 <label>Gender</label>
-                <input type="text" name="gender" class="form-control" id="Gender" placeholder="Enter Gender" required />
+                <select name="gender" id="gender" class="form-control">
+                  <option selected="selected" value="Female">Female</option>
+                  <option value="Male">Male</option>
+                </select>
+
               </div>
 
               <div class="form-group">
@@ -524,7 +528,7 @@
     <!--==========================
       About Us Section
     ============================-->
-    <section id="Swaranjali">
+    <section id="mandra-mayhem">
       <div class="container">
 
         <header class="section-header">
@@ -556,26 +560,27 @@
         </header>
 
         <center> <button class="btn btn-primary" onclick="disp_mayhem()">Register</button></center>
-        <div id="myDIV" style="display: none;">
+
+
+        <div id="mandramayhem_reg" style="display: none;">
           <br>
-             <form name="mayhem_form" id="mayhem_form" onsubmit="return false">
-              <fieldset>
+          <form id="mandramayhem_form" onsubmit="return false">
 
-                <label for="exampleInputEmail1">Leader Naad ID</label>
-                <input type="text" name="Leader_id" class="form-control" placeholder="Enter Leader ID">
-                <br>
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" name="Leader_Name" class="form-control" placeholder="Enter Leader Name">
-
-                <label for="exampleInputEmail1">Member ID's</label>
-                <input type="text" name="Member_Ids" class="form-control" placeholder="Enter Member Id's(if any)">
-              </fieldset>
-
-
-            </form>
-            <div id="mayhem_status">
-            <input type="submit" class="submit_mayhem" id="submit_mayhem" value="Register for Mayhem" required />
+            <label for="exampleInputEmail1">Leader Naad ID</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">NAAD00</span>
+              </div>
+              <input type="text" name="id" class="form-control" placeholder="12">
             </div>
+            <br>
+
+          </form>
+          <button class="btn btn-info" onclick="add_participants('mandramayhem')"> Add participant</button>
+          <div id="mandramayhem_status">
+            <input event="Mandra Mayhem" type="submit" class="submit_event" id="submit_mandramayhem"
+              value="Register for Mandra Mayhem" required />
+          </div>
         </div>
 
       </div>
@@ -585,17 +590,20 @@
     <script>
 
       function disp_mayhem() {
-        var x = document.getElementById("myDIV");
+        var x = document.getElementById("mandramayhem_reg");
         if (x.style.display === "none") {
           x.style.display = "block";
         } else {
           x.style.display = "none";
         }
       }
+
+
+
     </script>
 
 
-    <section id="Tarang">
+    <section id="rageshree">
       <div class="container">
 
         <header class="section-header">
@@ -634,22 +642,21 @@
             <fieldset>
               <div class="form-group">
                 <label for="exampleInputEmail1">NAAD ID</label>
-                <input type="text" name="Leader_id" class="form-control" placeholder="Enter Name">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
+                  </div>
+                  <input type="text" name="id" class="form-control" placeholder="12">
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" name="Leader_Name" class="form-control" placeholder="Enter Name">
-              </div>
 
-              <label for="exampleInputEmail1">Member ID's</label>
-              <input type="text" name="Member_Ids" class="form-control" placeholder="Enter Member Id's(if any)">
-
-              </fieldset>
+            </fieldset>
           </form>
           <div id="rageshree_status">
-            <input type="submit" class="submit_rageshree" id="submit_rageshree" value="Register for Rageshree" required />
-            </div>
+            <input event="Rageshree" type="submit" class="submit_event" id="submit_rageshree"
+              value="Register for Rageshree" required />
+          </div>
 
         </div>
     </section><!-- #about -->
@@ -667,7 +674,7 @@
       }
     </script>
 
-    <section id="Dhun">
+    <section id="dhun">
       <div class="container">
 
         <header class="section-header">
@@ -709,27 +716,25 @@
         <center> <button class="btn btn-primary" onclick="disp_dhun()">Register</button></center>
         <div id="dhun_reg" style="display: none;">
           <br>
-    
+
           <form name="dhun_form" id="dhun_form" onsubmit="return false">
             <fieldset>
               <div class="form-group">
                 <label for="exampleInputEmail1">NAAD ID</label>
-                <input type="text" name="Leader_id" class="form-control" placeholder="Enter Name">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
+                  </div>
+                  <input type="text" name="id" class="form-control" placeholder="12">
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" name="Leader_Name" class="form-control" placeholder="Enter Name">
-              </div>
-
-              <label for="exampleInputEmail1">Member ID's</label>
-              <input type="text" name="Member_Ids" class="form-control" placeholder="Enter Member Id's(if any)">
-
-              </fieldset>
+            </fieldset>
           </form>
           <div id="dhun_status">
-            <input type="submit" class="submit_dhun" id="submit_dhun" value="Register for Dhun" required />
-            </div>
+            <input event="Dhun" type="submit" class="submit_event" id="submit_dhun" value="Register for Dhun"
+              required />
+          </div>
 
 
 
@@ -749,7 +754,7 @@
       }
     </script>
 
-    <section id="Alankaar">
+    <section id="alankaar">
       <div class="container">
 
         <header class="section-header">
@@ -786,27 +791,24 @@
         <center> <button class="btn btn-primary" onclick="disp_alankaar()">Register</button></center>
         <div id="alankaar_reg" style="display: none;">
           <br>
-    
+
           <form name="alankaar_form" id="alankaar_form" onsubmit="return false">
             <fieldset>
               <div class="form-group">
                 <label for="exampleInputEmail1">NAAD ID</label>
-                <input type="text" name="Leader_id" class="form-control" placeholder="Enter Name">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
+                  </div>
+                  <input type="text" name="id" class="form-control" placeholder="12">
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" name="Leader_Name" class="form-control" placeholder="Enter Name">
-              </div>
-
-              <label for="exampleInputEmail1">Member ID's</label>
-              <input type="text" name="Member_Ids" class="form-control" placeholder="Enter Member Id's(if any)">
-
-              </fieldset>
+            </fieldset>
           </form>
           <div id="alankaar_status">
-            <input type="submit" class="submit_alankaar" id="submit_alankaar" value="Register for alankaar" required />
-            </div>
+            <input type="submit" class="submit_event" id="submit_alankaar" value="Register for Alankaar" required />
+          </div>
 
 
 
@@ -823,7 +825,7 @@
         }
       }
     </script>
-    <section id="Euphony">
+    <section id="euphony">
       <div class="container">
 
         <header class="section-header">
@@ -857,27 +859,24 @@
         <center> <button class="btn btn-primary" onclick="disp_euphony()">Register</button></center>
         <div id="euphony_reg" style="display: none;">
           <br>
-    
+
           <form name="euphony_form" id="euphony_form" onsubmit="return false">
             <fieldset>
               <div class="form-group">
                 <label for="exampleInputEmail1">NAAD ID</label>
-                <input type="text" name="Leader_id" class="form-control" placeholder="Enter Name">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
+                  </div>
+                  <input type="text" name="id" class="form-control" placeholder="12">
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" name="Leader_Name" class="form-control" placeholder="Enter Name">
-              </div>
-
-              <label for="exampleInputEmail1">Member ID's</label>
-              <input type="text" name="Member_Ids" class="form-control" placeholder="Enter Member Id's(if any)">
-
-              </fieldset>
+            </fieldset>
           </form>
           <div id="euphony_status">
-            <input type="submit" class="submit_euphony" id="submit_euphony" value="Register for euphony" required />
-            </div>
+            <input type="submit" class="submit_event" id="submit_euphony" value="Register for Euphony" required />
+          </div>
 
         </div>
     </section>
@@ -893,7 +892,7 @@
       }
     </script>
 
-    <section id="Maati">
+    <section id="maati">
       <div class="container">
 
         <header class="section-header">
@@ -926,27 +925,27 @@
         <center> <button class="btn btn-primary" onclick="disp_maati()">Register</button></center>
         <div id="maati_reg" style="display: none;">
           <br>
-    
+
           <form name="maati_form" id="maati_form" onsubmit="return false">
             <fieldset>
               <div class="form-group">
                 <label for="exampleInputEmail1">NAAD ID</label>
-                <input type="text" name="Leader_id" class="form-control" placeholder="Enter Name">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
+                  </div>
+                  <input type="text" name="id" class="form-control" placeholder="12">
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" name="Leader_Name" class="form-control" placeholder="Enter Name">
-              </div>
-
-              <label for="exampleInputEmail1">Member ID's</label>
-              <input type="text" name="Member_Ids" class="form-control" placeholder="Enter Member Id's(if any)">
-
-              </fieldset>
+            </fieldset>
           </form>
+
+          <button class="btn btn-info" onclick="add_participants('maati')"> Add participant</button>
+
           <div id="maati_status">
-            <input type="submit" class="submit_maati" id="submit_maati" value="Register for maati" required />
-            </div>
+            <input type="submit" class="submit_event" id="submit_maati" value="Register for Maati" required />
+          </div>
 
 
         </div>
@@ -1055,6 +1054,8 @@
 
   <!-- PERSONAL REGISTRATION -->
   <script>
+    var req_url = "http://naad.dhwanibitmesra.live/api"
+
     $.fn.serializeObject = function () {
       var o = {};
       var a = this.serializeArray();
@@ -1071,36 +1072,166 @@
       return o;
     };
 
-    
+    function add_participants(event) {
+      // console.log(event + " added");
+      // console.log("#" + event + "_form");
+      console.log($("form#" + event + "_form").attr('id'));
+      $("form#" + event + "_form").append(`<div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">NAAD00</span>
+              </div>
+              <input type="text" name="memberId" class="form-control" placeholder="12">
+            </div>`);
+
+
+    }
+
+    var email_error = false;
+    var name_error = false;
+    var phone_error = false;
+    var college_error = false;
+    var branch_error = false;
+
+    function check_name(argname) {
+      var name = argname.trim();
+      if (name != '') {
+        name_error = false;
+      }
+      else {
+        name_error = true;
+      }
+    }
+
+    function check_email(argemail) {
+      var pattern = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@(([0-9a-zA-Z])+([-\w]*[0-9a-zA-Z])*\.)+[a-zA-Z]{2,9})$/;
+      var email = argemail.trim();
+      if (pattern.test(email) && email != '') {
+        email_error = false;
+      }
+      else {
+        email_error = true;
+      }
+    }
+    function check_phone(argphone) {
+      var pattern = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+      console.log(argphone);
+      var phone = argphone.trim();
+      if (phone.match(pattern) && parseInt(phone) > 6000000000 && parseInt(phone) < 10000000000) {
+
+        phone_error = false;
+      }
+      else {
+
+        phone_error = true;
+      }
+    }
 
 
     $('#submit_reg').click(function (e) {
 
       e.preventDefault();
 
-      document.getElementById("naad_id").innerHTML='<input type=submit class="submit" id="submit_reg" value="Please Wait Registering..." required />';
-      console.log($('form#contactform').serializeObject());
+      
+
+      var data = $('form#contactform').serializeObject();
+      name_error = false;
+      college_error = false;
+      phone_error = false;
+      email_error = false;
+      branch_error = false;
+      roll_error = false;
+
+      check_name(data.name);
+      if (data.school === '') {
+        college_error = true;
+      }
+      check_phone(data.contact);
+      check_email(data.email);
+      if (data.branch === '') {
+        branch_error = true;
+      }
+      if(data.rollNo===''){
+        roll_error = true;
+      }
+
+
+
+      if (name_error) {
+        window.alert("Please enter the name.");
+      }
+      else if (college_error) {
+        window.alert("Please enter college/school name");
+      }
+      else if (phone_error) {
+        window.alert("Invalid Phone Number");
+      }
+      else if (email_error) {
+        window.alert("Invalid email");
+      }
+      else if (branch_error) {
+        window.alert("Invalid Branch/Stream");
+      }
+      else if(roll_error){
+        window.alert("Invalid Roll no");
+      }
+
+      if(name_error||college_error||phone_error||email_error||branch_error||roll_error){
+        return false;
+      }
+
+
+      document.getElementById("naad_id").innerHTML = '<input type=submit class="submit" id="submit_reg" value="Please Wait Registering..." required />';
+
       $.ajax({
-        url: 'http://naad.dhwanibitmesra.live/api/registration',
+        url: req_url + '/registration',
         type: "POST",
-        data: $('form#contactform').serializeObject(),
-        success: function(res){
-          console.log(res);
-          document.getElementById("naad_id").innerHTML='<input type=submit class="submit" value="You have successfully registered, Your NAAD ID is NAAD00'+res[0].id+'" required />';
+        data: data,
+        success: function (res) {
+
+          document.getElementById("naad_id").innerHTML = '<input type=submit class="submit" value="You have successfully registered, Your NAAD ID is NAAD00' + res[0].id + '" required />';
         },
-        error: function(err){
+        error: function (err) {
+          alert("Some error occured");
+        }
+      });
+    });
+
+    $('.submit_event').on('click', function (e) {
+      e.preventDefault();
+      console.log("form#" + e.target.id.substring(7) + "_form");
+      var data = $("form#" + e.target.id.substring(7) + "_form").serializeObject();
+      data["event"] = e.target.value.substring(13);
+      if (data["memberId"] === undefined) {
+        data["memberId"] = [];
+      }
+      console.log(data);
+
+      document.getElementById("mayhem_status").innerHTML = '<input type=submit class="submit" id="submit_reg" value="Please Wait Registering..." required />';
+      //console.log($('form#mandramayhem_form').serializeObject());
+      var jqxhr = $.ajax({
+        url: req_url + '/eventReg',
+        method: "POST",
+        dataType: "json",
+        data: data,
+        success: function (res) {
+          console.log(res.status);
+          if (res.status === "error") {
+            window.alert(res.message);
+          }
+          else document.getElementById(e.target.id.substring(7) + "_status").innerHTML = '<input type=submit class="submit" id="submit_reg" value="Registration Successful!" required />';
+          console.log(res);
+        },
+        error: function (err) {
           console.log(err);
         }
       });
-    })
 
-
+    });
   </script>
 
 
 
-  <!-- MAYHEM REGISTRATION -->
-  
+
 </body>
 
 </html>
