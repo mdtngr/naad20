@@ -221,7 +221,7 @@
 
               <div class="form-group">
                 <label>Branch</label>
-                <input type="text" name="branch" class="form-control" id="Branch" placeholder="Enter Branch" required />
+                <input type="text" name="branch" class="form-control" id="Branch" placeholder="Enter Branch">
               </div>
 
 
@@ -236,8 +236,7 @@
 
               <div class="form-group">
                 <label>Roll No</label>
-                <input type="text" name="rollNo" class="form-control" id="Rollno" placeholder="Enter Roll Number"
-                  required />
+                <input type="text" name="rollNo" class="form-control" id="Rollno" placeholder="Enter Roll Number">
               </div>
 
 
@@ -1137,10 +1136,12 @@
       check_phone(data.contact);
       check_email(data.email);
       if (data.branch === '') {
-        branch_error = true;
+        // branch_error = true;
+        data.branch= "NIL";  /*added*/
       }
       if(data.rollNo===''){
-        roll_error = true;
+        // roll_error = true;
+        data.rollNo = "NIL"; /*added*/
       }
 
 
