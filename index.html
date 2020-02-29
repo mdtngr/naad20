@@ -503,7 +503,7 @@
     <!--==========================
       About Us Section
     ============================-->
-    <section id="mandra-mayhem">
+    <section id="mandramayhem">
       <div class="container">
 
         <header class="section-header">
@@ -1208,7 +1208,7 @@
           if (res.status === "error") {
             window.alert(res.message);
           }
-          document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registration Succesful" required />' ;
+          else document.getElementById(e.target.id.substring(7)+"_status").innerHTML ='<input  type="submit" class="submit_event" id="submit_'+e.target.id.substring(7)+'" value="Registration Succesful" required />' ;
           console.log(res);
         },
         error: function (err) {
