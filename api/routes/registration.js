@@ -104,7 +104,7 @@ router.post('/registration', async (req, res) => {
                 }
                 else {
                     console.log(data[0].email);
-                    sendEmail(data[0].email, "Registration for Naad 2020", "<i>Music, even in situations of the greatest horror, should never be painful to the ear but should flatter and charm it, and thereby always remain music. - Mozart</i> <br><br> Congratulations,<b>" + data[0].name + "</b>! You have succesfully registered for Naad'20. Your Naad ID is <strong>NAAD00" + data[0].id + "</strong>. Kindly keep it safe for future purposes. See you around, till then stay musical!<br> Team Naad");
+                    sendEmail(data[0].email, "Registration for NAAD'20", "<i>Music, even in situations of the greatest horror, should never be painful to the ear but should flatter and charm it, and thereby always remain music. - Mozart</i> <br><br><br> Congratulations, <b>" + data[0].name + "</b>! You have succesfully registered for NAAD'20. Your NAAD ID is <strong>NAAD00" + data[0].id + "</strong>. Kindly keep it safe for future purposes.<br><br> See you around, till then, stay musical!<br><br> Team NAAD");
                 }
                 res.json(data);
             });
