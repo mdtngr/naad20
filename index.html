@@ -1274,7 +1274,7 @@
         data: data,
         success: function (res) {
 
-          document.getElementById("naad_id").innerHTML = '<input type=submit class="submit" value="You have successfully registered, Your NAAD ID is NAAD00' + res[0].id + '" required />';
+          document.getElementById("naad_id").innerHTML = '<center><input type=submit class="submit" value="You have successfully registered.<br>Your NAAD ID is NAAD00' + res[0].id + '" required /></center>';
         },
         error: function (err) {
           alert("Some error occured");
