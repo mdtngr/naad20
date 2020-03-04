@@ -31,8 +31,8 @@ router.post('/eventReg', async (req, res) => {
                     status: "error",
                     message: "NAAD00"+req.body.id+" doesn't exist."
                 });
-            }   
-
+            }
+		var check=null;
             for(x in req.body.memberId){
                 await Registration.findOne({id:req.body.memberId[x]},function(err,data){
                     if(err){
@@ -41,13 +41,17 @@ router.post('/eventReg', async (req, res) => {
                     else{
 			console.log(data);
                         if(!data){
-                            return res.json({
-                                status: "error",
-                                message: "NAAD00"+req.body.memberId[x]+" doesn't exist."
-                            });
+                            check=req.body.memberId[x];
+                            return;
                         }
                     }
                 });
+                if(check){
+                    return res.json({
+                        status: "error",
+                        message: "NAAD00"+check+" doesn't exist."
+                    });
+                }
                 
             }
 
@@ -73,7 +77,7 @@ router.post('/eventReg', async (req, res) => {
                     console.log(data);
                 }
             });
-            res.json({
+            return res.json({
                 status: "success",
                 message: "Stored Succesfully"
             });
