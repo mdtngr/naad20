@@ -50,12 +50,7 @@ router.post('/eventReg', async (req, res) => {
                 
             }
 
-            if(2>req.body.memberId.length||req.body.memberId.length>7){
-                return res.json({
-                    status: "error",
-                    message: "Number of members should be 3-8"
-                });
-            }
+
 
             var data = [{
                 id: req.body.id,
