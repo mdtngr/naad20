@@ -33,9 +33,9 @@
   <!-- Libraries CSS Files -->
   <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="lib/animate/animate.min.css">
-  <link rel="stylesheet" href="lib/ionicons/css/ionicons.min.css" >
-  <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" >
-  <link rel="stylesheet" href="lib/lightbox/css/lightbox.min.css" >
+  <link rel="stylesheet" href="lib/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="lib/lightbox/css/lightbox.min.css">
 
   <!-- Main Stylesheet File -->
   <link rel="stylesheet" href="css/style.css" as="style">
@@ -579,8 +579,20 @@
                 </div>
                 <input type="text" name="id" class="form-control" placeholder="For eg. 12">
               </div>
-              <br>
+              <label for="exampleInputEmail1">Members Naad ID</label>
 
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">NAAD00</span>
+                </div>
+                <input type="text" name="memberId" class="form-control" placeholder="For eg. 12">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">NAAD00</span>
+                </div>
+                <input type="text" name="memberId" class="form-control" placeholder="For eg. 12">
+              </div>
             </form>
             <button class="btn btn-info" onclick="add_participants('mandramayhem')"> Add participant</button>
             <div id="mandramayhem_status">
@@ -653,20 +665,18 @@
           <div id="rageshree_reg" style="display: none;">
             <br>
 
-            <form name="rageshree_form" id="rageshree_form" onsubmit="return false">
-              <fieldset>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">NAAD ID</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">NAAD00</span>
-                    </div>
-                    <input type="text" name="id" class="form-control" placeholder="For eg. 12">
+            <form class="event_form" name="rageshree_form" id="rageshree_form" onsubmit="return false">
+              <div class="form-group">
+                <label for="exampleInputEmail1">NAAD ID</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
                   </div>
+                  <input type="text" name="id" class="form-control" placeholder="For eg. 12">
                 </div>
+              </div>
 
 
-              </fieldset>
             </form>
             <div id="rageshree_status">
               <input event="Rageshree" type="submit" class="submit_event" id="submit_rageshree"
@@ -736,19 +746,17 @@
           <div id="dhun_reg" style="display: none;">
             <br>
 
-            <form name="dhun_form" id="dhun_form" onsubmit="return false">
-              <fieldset>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">NAAD ID</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">NAAD00</span>
-                    </div>
-                    <input type="text" name="id" class="form-control" placeholder="For eg. 12">
+            <form class="event_form" name="dhun_form" id="dhun_form" onsubmit="return false">
+              <div class="form-group">
+                <label for="exampleInputEmail1">NAAD ID</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
                   </div>
+                  <input type="text" name="id" class="form-control" placeholder="For eg. 12">
                 </div>
+              </div>
 
-              </fieldset>
             </form>
             <div id="dhun_status">
               <input type="submit" class="submit_event" id="submit_dhun" value="Register for Dhun" required />
@@ -818,19 +826,17 @@
           <div id="alankaar_reg" style="display: none;">
             <br>
 
-            <form name="alankaar_form" id="alankaar_form" onsubmit="return false">
-              <fieldset>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">NAAD ID</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">NAAD00</span>
-                    </div>
-                    <input type="text" name="id" class="form-control" placeholder="For eg. 12">
+            <form class="event_form" name="alankaar_form" id="alankaar_form" onsubmit="return false">
+              <div class="form-group">
+                <label for="exampleInputEmail1">NAAD ID</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
                   </div>
+                  <input type="text" name="id" class="form-control" placeholder="For eg. 12">
                 </div>
+              </div>
 
-              </fieldset>
             </form>
             <div id="alankaar_status">
               <input type="submit" class="submit_event" id="submit_alankaar" value="Register for Alankaar" required />
@@ -897,19 +903,17 @@
           <div id="euphony_reg" style="display: none;">
             <br>
 
-            <form name="euphony_form" id="euphony_form" onsubmit="return false">
-              <fieldset>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">NAAD ID</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">NAAD00</span>
-                    </div>
-                    <input type="text" name="id" class="form-control" placeholder="For eg. 12">
+            <form class="event_form" name="euphony_form" id="euphony_form" onsubmit="return false">
+              <div class="form-group">
+                <label for="exampleInputEmail1">NAAD ID</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
                   </div>
+                  <input type="text" name="id" class="form-control" placeholder="For eg. 12">
                 </div>
+              </div>
 
-              </fieldset>
             </form>
             <div id="euphony_status">
               <input type="submit" class="submit_event" id="submit_euphony" value="Register for Euphony" required />
@@ -972,19 +976,32 @@
           <div id="maati_reg" style="display: none;">
             <br>
 
-            <form name="maati_form" id="maati_form" onsubmit="return false">
-              <fieldset>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">NAAD ID</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">NAAD00</span>
-                    </div>
-                    <input type="text" name="id" class="form-control" placeholder="For eg. 12">
+            <form class="event_form" name="maati_form" id="maati_form" onsubmit="return false">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Leader NAAD ID</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">NAAD00</span>
                   </div>
+                  <input type="text" name="id" class="form-control" placeholder="For eg. 12">
                 </div>
+              </div>
+              <label for="exampleInputEmail1">Members NAAD ID</label>
 
-              </fieldset>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">NAAD00</span>
+                </div>
+                <input type="text" name="memberId" class="form-control" placeholder="For eg. 12">
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">NAAD00</span>
+                </div>
+                <input type="text" name="memberId" class="form-control" placeholder="For eg. 12">
+              </div>
+
             </form>
 
             <button class="btn btn-info" onclick="add_participants('maati')"> Add participant</button>
@@ -1286,12 +1303,10 @@
           console.log(res.status);
           if (res.status === "error") {
             window.alert(res.message);
+            window.location.reload = true;
           }
           else document.getElementById(e.target.id.substring(7) + "_status").innerHTML = '<input  type="submit" class="submit_event" id="submit_' + e.target.id.substring(7) + '" value="Registration Succesful" required />';
           console.log(res);
-        },
-        error: function (err) {
-          console.log(err);
         }
       });
 
