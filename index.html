@@ -42,8 +42,12 @@
 </head>
 
 <body>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
 
-
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
   <header id="header">
     <div class="container-fluid">
 
@@ -130,7 +134,8 @@
                 <h2>The Grand Finale Night<br>
                   <h2 style="font-weight: bolder; font-size: 60px;font-family: Kurale;">' निषाद '</h2>
                 </h2>
-                <p>The top performers of all competitions battle it out in 'Nishaad' to clinch the crown of the 'Overall
+                <p>The top performers of all competitions battle it out in 'Nishaad' to clinch the crown of the
+                  'Overall
                   Champion' of NAAD.</p>
                 <!-- <a href="#about" class="btn-get-started scrollto">Know more about NAAD</a><br> -->
                 <!-- <a href="#services" class="btn-get-started scrollto">Click here to get your registration ID</a> -->
@@ -169,15 +174,18 @@
         <header class="section-header">
           <h3>About NAAD</h3>
           <p>Music! Its feet stead fasted in the deepest of the seas and its head held high into the sky! Indeed, it’s
-            something so pure, so serene! The melody of the primordial sound that leaves us enchanted, the sound of the
-            cosmos and of human consciousness, a sound that transcends space and time, a sound that has no beginning or
+            something so pure, so serene! The melody of the primordial sound that leaves us enchanted, the sound of
+            the
+            cosmos and of human consciousness, a sound that transcends space and time, a sound that has no beginning
+            or
             end, a sound that isn’t simply music, a sound that’s magic- NAAD!<br><br>
 
             Gear up folks, as Dhwani- Music Club, BIT Mesra returns with its annual inter-college music competition -
             NAAD! The wait is finally
             over and the excitement is going to take you on a roll! Get ready to witness music in its purest form
             through
-            a series of electrifying events and competitions ranging from Hard-core metal rock to spellbinding tunes of
+            a series of electrifying events and competitions ranging from Hard-core metal rock to spellbinding tunes
+            of
             Indian Classical Music! Scintillating nights and exhilarating events await!<br><br>
 
             So prepare yourselves to hit the right notes, knock up your instruments to strike the right chords and get
@@ -619,7 +627,8 @@
           2. Participants must perform solo or with a maximum of 2 accompanists can bring up to 2 accompanists for the
           competition but the judgement will be based only on the vocal performance.
           <br>
-          3. No accompanying instruments are allowed except a harmonium, tanpura and tabla. Participants may bring their
+          3. No accompanying instruments are allowed except a harmonium, tanpura and tabla. Participants may bring
+          their
           own instruments. A harmonium, electronic tanpura, electronic tabla and a tabla set will be provided.
           <br>
           4. Time limit is 10 minutes (Stage in to Stage out) and it should be strictly followed. Participants will be
@@ -852,7 +861,8 @@
 
 
           <center>
-            <h4>Get ready to strike the chords of euphoria and flow in with the ever- dynamic opulence of western music
+            <h4>Get ready to strike the chords of euphoria and flow in with the ever- dynamic opulence of western
+              music
               as
               NAAD presents to you Euphony- the western singing competition!</h4>
           </center>
@@ -928,7 +938,8 @@
           </h3>
 
           <center>
-            <h4>Gear up to flow in with the perfect blend of ritualistic folk and cultural expressions of music as NAAD
+            <h4>Gear up to flow in with the perfect blend of ritualistic folk and cultural expressions of music as
+              NAAD
               brings
               to you the folk regional singing competition- Maati!</h4> <br>
           </center>
@@ -1090,19 +1101,32 @@
 
   <!-- PERSONAL REGISTRATION -->
   <script>
+    
+    
 
-    var arr = ['lib/bootstrap/css/bootstrap.min.css',"lib/font-awesome/css/font-awesome.min.css","lib/animate/animate.min.css","lib/ionicons/css/ionicons.min.css","lib/owlcarousel/assets/owl.carousel.min.css","lib/lightbox/css/lightbox.min.css","css/style.css"]
+      $(window).load(function () {
+        console.log("Loaded");
+        $('#loader-wrapper').fadeOut('slow',function(){
+          console.log("Wrapper reached");
+        });
+      });
+
+
+  
+
+
+    var arr = ['lib/bootstrap/css/bootstrap.min.css', "lib/font-awesome/css/font-awesome.min.css", "lib/animate/animate.min.css", "lib/ionicons/css/ionicons.min.css", "lib/owlcarousel/assets/owl.carousel.min.css", "lib/lightbox/css/lightbox.min.css", "css/style.css"]
 
     arr.forEach(link => {
       $('<link>')
-      .appendTo('head')
-      .attr({
-        type: 'text/css',
-        rel: 'stylesheet',
-        href: link
-      }); 
+        .appendTo('head')
+        .attr({
+          type: 'text/css',
+          rel: 'stylesheet',
+          href: link
+        });
     });
-     
+
 
 
 
