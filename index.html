@@ -1303,7 +1303,7 @@
           console.log(res.status);
           if (res.status === "error") {
             window.alert(res.message);
-            window.location.reload = true;
+            window.location.reload();
           }
           else document.getElementById(e.target.id.substring(7) + "_status").innerHTML = '<input  type="submit" class="submit_event" id="submit_' + e.target.id.substring(7) + '" value="Registration Succesful" required />';
           console.log(res);

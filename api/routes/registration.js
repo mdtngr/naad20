@@ -33,12 +33,13 @@ router.post('/eventReg', async (req, res) => {
                 });
             }   
 
-            for(x in req.body.memberId[x]){
+            for(x in req.body.memberId){
                 await Registration.findOne({id:req.body.memberId[x]},function(err,data){
                     if(err){
                         console.log(err);
                     }
                     else{
+			console.log(data);
                         if(!data){
                             return res.json({
                                 status: "error",
