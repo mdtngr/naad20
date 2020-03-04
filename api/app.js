@@ -54,6 +54,7 @@ app.use(sessionMiddleware);
 app.use(flash());
 app.use(cors());
 app.use(partials());
+//mongoose.set('debug', true)
 
 
 app.use(passport.initialize());

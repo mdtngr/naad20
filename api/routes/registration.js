@@ -2,8 +2,10 @@ const express = require("express");
 const router = express.Router();
 const Registration = require('./../models/registration');
 const Event = require('./../models/event');
+const Count = require('./../models/counter');
 const passport = require('passport');
 const sendEmail = require('./../utils/sendEmail');
+
 
 
 
@@ -67,52 +69,39 @@ router.post('/eventReg', async (req, res) => {
 
 
 router.post('/registration', async (req, res) => {
-
-
+    
     console.log("Registration collection connecting...");
-    await Registration.find({}, async (err, data) => {
+    var x = await Count.findOneAndUpdate({},{$inc : {count:1}},{upsert:true,new:true} );
+    //console.log(x.count);
+    if(!x.count){
+        return res.json("error");
+    }
+
+    var last = x.count;
+    var data = [{
+        name: req.body.name,
+        id: last,
+        school: req.body.school,
+        contact: req.body.contact,
+        email: req.body.email,
+        branch: req.body.branch,
+        gender: req.body.gender,
+        rollNo: req.body.rollNo
+    }]
+
+
+    await Registration.create(data, (err, data) => {
         if (err) {
             console.log(err);
             return res.sendStatus(500);
         }
         else {
-            var last = 1;
-            if (data.length >= 1) {
-                last = data.length + 1;
-            }
-            else {
-                last = 1;
-            }
-
-            console.log(data.length);
-            var data = [{
-                name: req.body.name,
-                id: last,
-                school: req.body.school,
-                contact: req.body.contact,
-                email: req.body.email,
-                branch: req.body.branch,
-                gender: req.body.gender,
-                rollNo: req.body.rollNo
-            }]
-
-
-            await Registration.create(data, (err, data) => {
-                if (err) {
-                    console.log(err);
-                    return res.sendStatus(500);
-                }
-                else {
-                    console.log(data[0].email);
-			var link = "http://naad.dhwanibitmesra.live/naadwhitelogo.png";
-                    sendEmail(data[0].email, "Registration for NAAD'20", "<div style='text-align:center'><img src="+link+"></div><i>Music, even in situations of the greatest horror, should never be painful to the ear but should flatter and charm it, and thereby always remain music. - Mozart</i> <br><br><br> Congratulations, <b>" + data[0].name + "</b>! You have succesfully registered for NAAD'20. Your NAAD ID is <strong>NAAD00" + data[0].id + "</strong>. Kindly keep it safe for future purposes.<br><br>For any queries, feel free to reply to this email or contact dhwani.bitmesra@gmail.com.<br><br> See you around, till then, stay musical!<br><br> Team NAAD");
-                }
-                res.json(data);
-            });
+            console.log(data[0].email);
+            var link = "http://naad.dhwanibitmesra.live/naadwhitelogo.png";
+            sendEmail(data[0].email, "Registration for NAAD'20", "<div style='text-align:center'><img src=" + link + "></div><i>Music, even in situations of the greatest horror, should never be painful to the ear but should flatter and charm it, and thereby always remain music. - Mozart</i> <br><br><br> Congratulations, <b>" + data[0].name + "</b>! You have succesfully registered for NAAD'20. Your NAAD ID is <strong>NAAD00" + data[0].id + "</strong>. Kindly keep it safe for future purposes.<br><br>For any queries, feel free to reply to this email or contact dhwani.bitmesra@gmail.com.<br><br> See you around, till then, stay musical!<br><br> Team NAAD");
         }
+        res.json(data);
     });
-
-
 
 
 
