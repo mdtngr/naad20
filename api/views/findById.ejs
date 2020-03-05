@@ -1,0 +1,53 @@
+<%- include ./../partials/header.ejs %>
+
+<div class="container">
+    <form method="POST" action="/api/admin/findById">
+        <h2>
+            <p><ins>Individual Details</ins></p>
+        </h2>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label>Name</label>
+                <input name="name" type="text" class="form-control" placeholder="Name">
+                    
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>School/College</label>
+                <input name="school" type="text" class="form-control" placeholder="School/College">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>NaadID</label>
+                <input name="id" type="text" class="form-control" placeholder="(Enter the last digits after NAAD00___)">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Contact</label>
+                <input name="contact" type="text" class="form-control" placeholder="Phone Number">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Email</label>
+                <input name="email" type="text" class="form-control" placeholder="Email">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Branch</label>
+                <input name="branch" type="text" class="form-control" placeholder="Branch">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Gender</label>
+                <input name="gender" type="text" class="form-control" placeholder="Gender">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Roll Number</label>
+                <input name="rollNo" type="text" class="form-control" placeholder="Roll No">
+            </div>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-warning">Submit</button>
+    </form>
+
+</div>
+
+</body>
+
+</html>

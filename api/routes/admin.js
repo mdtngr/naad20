@@ -3,14 +3,15 @@ const router = express.Router();
 const passport = require('passport');
 const Admin = require('./../models/admin');
 const Event = require('./../models/event');
+const Registration = require('./../models/registration');
 
 
 
 router.get('/login', async (req, res) => {
     if (req.isAuthenticated()) {
-        res.redirect('findEvent');
+        return res.redirect('findEvent');
     }
-    res.render('login');
+    return res.render('login');
 });
 
 router.post('/login', passport.authenticate('local', {
@@ -40,17 +41,24 @@ router.get('/findEvent', (req, res) => {
     res.render('findEvent');
 });
 
+router.get('/findById', (req, res) => {
+    if (req.isAuthenticated() === false) {
+        res.redirect('login');
+    }
+    res.render('findById');
+});
+
 
 router.post('/findEvent', async (req, res) => {
 
 
     for (var x in req.body) {
         if (req.body[x] === '') {
-            console.log(x);
+            //console.log(x);
             delete req.body[x];
         }
     }
-    console.log(req.body);
+    //console.log(req.body);
 
     await Event.find(req.body, (err, data) => {
         if (err) {
@@ -60,6 +68,29 @@ router.post('/findEvent', async (req, res) => {
         else {
             console.log(data);
             res.render('eventResult', { participants: data });
+        }
+    });
+});
+
+router.post('/findById', async (req, res) => {
+
+
+    for (var x in req.body) {
+        if (req.body[x] === '') {
+            //console.log(x);
+            delete req.body[x];
+        }
+    }
+    //console.log(req.body);
+
+    await Registration.find(req.body, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.redirect('findById');
+        }
+        else {
+            console.log(data);
+            res.render('findByIdResult', { participants: data });
         }
     });
 });
