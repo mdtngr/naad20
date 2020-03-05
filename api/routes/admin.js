@@ -5,6 +5,9 @@ const Admin = require('./../models/admin');
 const Event = require('./../models/event');
 const Registration = require('./../models/registration');
 
+router.get('/', async (req, res) => {
+    return res.render('login');
+});
 
 
 router.get('/login', async (req, res) => {
