@@ -72,7 +72,7 @@ app.use(function (req, res, next) {
 
 app.use('/api', registrationRoutes);
 app.use('/api/admin/', adminRoutes);
-app.use(indexRoutes);
+app.use('/api/feed',indexRoutes);
 
 
 
