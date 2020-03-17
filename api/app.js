@@ -11,6 +11,7 @@ const server = require('http').createServer(app);
 const cors = require('cors');
 const registrationRoutes = require('./routes/registration');
 const adminRoutes = require('./routes/admin');
+const indexRoutes = require('./routes/index');
 const Admin = require('./models/admin');
 const MongoStore = require('connect-mongo')(session);
 
@@ -71,6 +72,7 @@ app.use(function (req, res, next) {
 
 app.use('/api', registrationRoutes);
 app.use('/api/admin/', adminRoutes);
+app.use(indexRoutes);
 
 
 

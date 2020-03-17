@@ -92,6 +92,9 @@ router.post('/eventReg', async (req, res) => {
 });
 
 
+
+
+
 router.post('/registration', async (req, res) => {
     
     console.log("Registration collection connecting...");
@@ -126,9 +129,6 @@ router.post('/registration', async (req, res) => {
         }
         res.json(data);
     });
-
-
-
 });
 
 
